@@ -11,7 +11,7 @@ class Author(models.Model):
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
-    publication_year = models.SmallIntegerField
+    publication_year = models.SmallIntegerField(default=1)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name="books", default=1)
 
     def __str__(self):

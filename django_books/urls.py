@@ -23,5 +23,6 @@ urlpatterns = [
         'rest_framework.urls', 
         namespace='rest_framework'
     )),
-    path('', include('users.urls'))
+    path('', include('users.urls')),
+    path('books/', include('drfbooks.urls')),
 ]
